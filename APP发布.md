@@ -10,7 +10,6 @@
     android/app/build.gradle //路径
 
     //代码
-
     versionCode 4  //每次发布加1，发布平台用于检测APP更新，提醒用户
     versionName "2.3.0"  //APP版本号
 
@@ -77,3 +76,4 @@
 ---
 
 ##ps:每次发布成功后，主干都得打个tags
+
