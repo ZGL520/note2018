@@ -90,3 +90,15 @@ MainApplication.java文件内添加配置，如下
 
 然后重新编译项目
 
+
+Image 使用gif格式图片只有iOS支持，在安卓上需要添加如下配置
+
+	android/app/build.gradle文件中dependencies模块下添加如下插件
+	
+	compile 'com.facebook.fresco:fresco:1.5.0'
+  	compile 'com.facebook.fresco:animated-gif:1.5.0'
+
+	
+	
+
+
