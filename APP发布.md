@@ -13,7 +13,12 @@
     versionCode 4  //每次发布加1，发布平台用于检测APP更新，提醒用户
     versionName "2.3.0"  //APP版本号
     
-    检查热更新key，每次热更新的时候要注意是什么环境，切记
+    检查热更新key，每次热更新的时候要注意是什么环境，切记,修改位置
+    android/app/src/main/java/com/seatour/MainApplication.java   //67行
+    
+    启动页修改，修改路径
+    
+    android/app/src/res //该路径下包含了，drawable_hdpi,drawable_mdpi,drawable_xhdpi,drawable_xxhdpi,drawable_xxxhdpi,都需要修改，确认
 
 2，修改环境配置，项目内
 
@@ -57,7 +62,7 @@
 
 2，xcode 修改版本号
 
-3，检查项目内的配置文件，版本号
+3，检查项目内的配置文件，版本号,检查热更新code
 
 4，打包操作
 

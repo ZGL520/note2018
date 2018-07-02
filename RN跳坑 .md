@@ -2,7 +2,7 @@ react-native
 
 ----
 
-1，在mac上初次使用react-native命令，出现如下错误
+##1，在mac上初次使用react-native命令，出现如下错误
 
 	xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
 	
@@ -15,7 +15,7 @@ react-native
 	
 	
 	
-2,每次删除依赖库后依次运行以下三条记录
+##2,在react native ,每次删除依赖库后依次运行以下三条记录
 	
 	//1
 	unlink node_modules/react-native/third-party/glog-0.3.4/test-driver
@@ -27,7 +27,7 @@ react-native
 	../../scripts/ios-configure-glog.sh
 
 
-3,解决 'boost/iterator/iterator_adaptor.hpp' file not found’ 及控制台":CFBundleIdentifier", Does Not Exist
+##3,react native 解决 'boost/iterator/iterator_adaptor.hpp' file not found’ 及控制台":CFBundleIdentifier", Does Not Exist
 
 	"react-native": "0.46.1"
 	这个问题产生原因：
@@ -45,7 +45,7 @@ react-native
 
 
 
-4,android studio 手动引入原生库
+##4,android studio 手动引入原生库
 
 在项目如下路径
 	
@@ -64,7 +64,7 @@ react-native
 然后打开Android studio -> 开开 file -> project structure -> dependencies -> 点击加号‘+’ -> module dependency -> 选择需要添加的依赖
 
 
-android 映入插件库配置
+android 引入插件库配置
 
 1，[项目名]/android/下
 
@@ -97,8 +97,26 @@ Image 使用gif格式图片只有iOS支持，在安卓上需要添加如下配�
 	
 	compile 'com.facebook.fresco:fresco:1.5.0'
   	compile 'com.facebook.fresco:animated-gif:1.5.0'
+  	
+  	
+  	
+  	
+  	
+##react native 与 webview之间的通信，
+
+可以通过刚给URL添加参数的形式向webview传递信息，如webview的h5需要登录验证的时候，向如下添加,然后在h5中通过监听URL变化获取参数
+
+	const url = url+`?phone=${[参数]}`
 
 	
-	
+h5向react native传递信息可以调用window.postMassage方法，传递一个字符串给react native，然后在react native 中的webview的onMassage属性上获取H5传递过来的字符串数据，数据从even.nativeEvent.data上获取，
+
+如下方法
+
+	onMessage(even) {
+    let {data} = even.nativeEvent;
+    console.log(data);
+    }
+
 
 
