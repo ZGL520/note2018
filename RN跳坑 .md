@@ -119,4 +119,33 @@ h5向react native传递信息可以调用window.postMassage方法，传递一个
     }
 
 
+##错误
 
+![1AB8555C-29B9-45AF-8813-D28A0F](media/1AB8555C-29B9-45AF-8813-D28A0FC31846.png)
+
+
+解决方法
+
+http://www.cnblogs.com/AimerXK/p/7747346.html
+
+
+
+##ios真机调试
+
+问题:no bundle url present
+
+解决方案:
+
+参考地址 https://www.jianshu.com/p/75eb44ccd4f0
+在appdelegate文件中做如下修改,把debug模式下的地址指向本机网络地址
+
+    #ifdef DEBUG
+    //jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+    jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.101:8081/index.ios.bundle?platform=ios&dev=true&minify=false"];
+    
+![-w849](media/15324128844343.jpg)
+
+
+##视图吸顶问题
+
+在react native 中有时需要实现吸顶问题,比如让某一个模块当页面滚动时始终固定咋顶部,在scrollview中有一个stickyHeaderIndices属性,该属性设置一个数组,数组包含scrollview中某一个或多个子元素的下标,该一个或过个子元素会在scrollview滚动时始终固定在顶部.
