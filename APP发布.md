@@ -14,7 +14,7 @@
     versionName "2.3.0"  //APP版本号
     
     检查热更新key，每次热更新的时候要注意是什么环境，切记,修改位置
-    android/app/src/main/java/com/seatour/MainApplication.java   //67行
+    android/app/src/main/java/com/seatour/MainApplication.java   //83行
     
     启动页修改，修改路径
     
@@ -83,4 +83,20 @@
 ---
 
 ##ps:每次发布成功后，主干都得打个tags
+
+
+
+
+安卓打包操作指南
+1,检查环境(包括原生环境)
+2,检查热更新code
+3,检查版本号
+4,检查渠道包key(默认应用宝[yyb])
+4,打包
+
+安卓打包操作指南
+1,默认原始包
+2,腾讯加固签名
+3,360加固签名
+4,使用360打渠道包
 
