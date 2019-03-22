@@ -9,3 +9,17 @@
 连接
 
     mongo
+    
+    
+查询数据库
+    
+    show dbs; | show databases;
+    
+查询数据表
+
+    show collentions; | show tables;
+    
+查询表内容
+
+    db.[表名].find()
+    
