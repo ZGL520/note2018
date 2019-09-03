@@ -20,4 +20,4 @@
     
 6,有时ssh连接不上
 
-    ssh-keygen -R hostname
+    ssh-keygen -R hostname   //删除本地ssh缓存
